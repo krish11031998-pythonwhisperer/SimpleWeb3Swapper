@@ -1,0 +1,890 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D6B05F4DB4B3CFCE476925E /* Pods_PopooAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 218D9E1151EA87AEE7ACE35B /* Pods_PopooAppTests.framework */; };
+		35053499C6A8AF4EB8FBEFAE /* Pods_PopooApp_PopooAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 437777A53130F39C6CE8BD83 /* Pods_PopooApp_PopooAppUITests.framework */; };
+		97D80B3797B775732A03FF29 /* Pods_PopooApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A339E01A9BF7C42336298367 /* Pods_PopooApp.framework */; };
+		EF36F6F4299E03EF00FC27B8 /* PopooAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF36F6F3299E03EF00FC27B8 /* PopooAppApp.swift */; };
+		EF36F6F6299E03EF00FC27B8 /* SwapTokenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF36F6F5299E03EF00FC27B8 /* SwapTokenView.swift */; };
+		EF36F6F8299E03F000FC27B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF36F6F7299E03F000FC27B8 /* Assets.xcassets */; };
+		EF36F6FB299E03F000FC27B8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF36F6FA299E03F000FC27B8 /* Preview Assets.xcassets */; };
+		EF36F705299E03F000FC27B8 /* PopooAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF36F704299E03F000FC27B8 /* PopooAppTests.swift */; };
+		EF36F70F299E03F000FC27B8 /* PopooAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF36F70E299E03F000FC27B8 /* PopooAppUITests.swift */; };
+		EF36F711299E03F000FC27B8 /* PopooAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF36F710299E03F000FC27B8 /* PopooAppUITestsLaunchTests.swift */; };
+		EF36F71F299E046E00FC27B8 /* SwapInfoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF36F71E299E046E00FC27B8 /* SwapInfoCard.swift */; };
+		EF36F722299E04EC00FC27B8 /* BorderedCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF36F721299E04EC00FC27B8 /* BorderedCard.swift */; };
+		EF36F724299E088400FC27B8 /* CardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF36F723299E088400FC27B8 /* CardType.swift */; };
+		EF36F726299E0A8400FC27B8 /* Buttonify.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF36F725299E0A8400FC27B8 /* Buttonify.swift */; };
+		EF36F729299E0D5D00FC27B8 /* EdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF36F728299E0D5D00FC27B8 /* EdgeInsets.swift */; };
+		EF36F72C299E0E1300FC27B8 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF36F72B299E0E1300FC27B8 /* ImageView.swift */; };
+		EF36F72E299E0E8E00FC27B8 /* ScaledModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF36F72D299E0E8E00FC27B8 /* ScaledModifier.swift */; };
+		EF36F730299E107C00FC27B8 /* ViewClipping.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF36F72F299E107C00FC27B8 /* ViewClipping.swift */; };
+		EF36F732299E118800FC27B8 /* UIImage+Load.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF36F731299E118800FC27B8 /* UIImage+Load.swift */; };
+		EF36F734299E238300FC27B8 /* DualLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF36F733299E238300FC27B8 /* DualLabel.swift */; };
+		EF36F737299E283200FC27B8 /* SwapService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF36F736299E283200FC27B8 /* SwapService.swift */; };
+		EF518485299E9AF2008C4A82 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF518484299E9AF2008C4A82 /* Extensions.swift */; };
+		EF51848D299F7C9D008C4A82 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF51848C299F7C9D008C4A82 /* String.swift */; };
+		EF51848F299F7E40008C4A82 /* PancakeSwapABI.json in Resources */ = {isa = PBXBuildFile; fileRef = EF51848E299F7E40008C4A82 /* PancakeSwapABI.json */; };
+		EF518492299F98F5008C4A82 /* AddWallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF518491299F98F5008C4A82 /* AddWallet.swift */; };
+		EF518497299F9FE2008C4A82 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF518496299F9FE2008C4A82 /* AppState.swift */; };
+		EF518499299FA0AE008C4A82 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF518498299FA0AE008C4A82 /* ContentView.swift */; };
+		EF51849B299FB0B2008C4A82 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF51849A299FB0B2008C4A82 /* CustomTextField.swift */; };
+		EF51849D299FB0FC008C4A82 /* RenderableText.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF51849C299FB0FC008C4A82 /* RenderableText.swift */; };
+		EF5184A0299FB32F008C4A82 /* CustomTextFieldConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF51849F299FB32F008C4A82 /* CustomTextFieldConfig.swift */; };
+		EF5184A2299FB355008C4A82 /* CustomTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5184A1299FB355008C4A82 /* CustomTextFieldStyle.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EF36F701299E03F000FC27B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF36F6E8299E03EF00FC27B8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF36F6EF299E03EF00FC27B8;
+			remoteInfo = PopooApp;
+		};
+		EF36F70B299E03F000FC27B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF36F6E8299E03EF00FC27B8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF36F6EF299E03EF00FC27B8;
+			remoteInfo = PopooApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		176038C1D9C8A10F121EB54C /* Pods-PopooAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PopooAppTests.release.xcconfig"; path = "Target Support Files/Pods-PopooAppTests/Pods-PopooAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		18C1C346DF5100CB0E80A201 /* Pods-PopooApp-PopooAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PopooApp-PopooAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-PopooApp-PopooAppUITests/Pods-PopooApp-PopooAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		218D9E1151EA87AEE7ACE35B /* Pods_PopooAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PopooAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		372E52EF8314C3B8787A6B9D /* Pods-PopooApp-PopooAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PopooApp-PopooAppUITests.release.xcconfig"; path = "Target Support Files/Pods-PopooApp-PopooAppUITests/Pods-PopooApp-PopooAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		437777A53130F39C6CE8BD83 /* Pods_PopooApp_PopooAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PopooApp_PopooAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F295287AE8D01FE374BB3FE /* Pods-PopooApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PopooApp.release.xcconfig"; path = "Target Support Files/Pods-PopooApp/Pods-PopooApp.release.xcconfig"; sourceTree = "<group>"; };
+		A339E01A9BF7C42336298367 /* Pods_PopooApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PopooApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8A1B77CB80FE140D5598DB9 /* Pods-PopooAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PopooAppTests.debug.xcconfig"; path = "Target Support Files/Pods-PopooAppTests/Pods-PopooAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DAB9536CD804436398A1F6FF /* Pods-PopooApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PopooApp.debug.xcconfig"; path = "Target Support Files/Pods-PopooApp/Pods-PopooApp.debug.xcconfig"; sourceTree = "<group>"; };
+		EF36F6F0299E03EF00FC27B8 /* PopooApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PopooApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF36F6F3299E03EF00FC27B8 /* PopooAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopooAppApp.swift; sourceTree = "<group>"; };
+		EF36F6F5299E03EF00FC27B8 /* SwapTokenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwapTokenView.swift; sourceTree = "<group>"; };
+		EF36F6F7299E03F000FC27B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF36F6FA299E03F000FC27B8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EF36F700299E03F000FC27B8 /* PopooAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PopooAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF36F704299E03F000FC27B8 /* PopooAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopooAppTests.swift; sourceTree = "<group>"; };
+		EF36F70A299E03F000FC27B8 /* PopooAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PopooAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF36F70E299E03F000FC27B8 /* PopooAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopooAppUITests.swift; sourceTree = "<group>"; };
+		EF36F710299E03F000FC27B8 /* PopooAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopooAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EF36F71E299E046E00FC27B8 /* SwapInfoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwapInfoCard.swift; sourceTree = "<group>"; };
+		EF36F721299E04EC00FC27B8 /* BorderedCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedCard.swift; sourceTree = "<group>"; };
+		EF36F723299E088400FC27B8 /* CardType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardType.swift; sourceTree = "<group>"; };
+		EF36F725299E0A8400FC27B8 /* Buttonify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttonify.swift; sourceTree = "<group>"; };
+		EF36F728299E0D5D00FC27B8 /* EdgeInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeInsets.swift; sourceTree = "<group>"; };
+		EF36F72B299E0E1300FC27B8 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		EF36F72D299E0E8E00FC27B8 /* ScaledModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaledModifier.swift; sourceTree = "<group>"; };
+		EF36F72F299E107C00FC27B8 /* ViewClipping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewClipping.swift; sourceTree = "<group>"; };
+		EF36F731299E118800FC27B8 /* UIImage+Load.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Load.swift"; sourceTree = "<group>"; };
+		EF36F733299E238300FC27B8 /* DualLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DualLabel.swift; sourceTree = "<group>"; };
+		EF36F736299E283200FC27B8 /* SwapService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwapService.swift; sourceTree = "<group>"; };
+		EF518484299E9AF2008C4A82 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		EF51848C299F7C9D008C4A82 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		EF51848E299F7E40008C4A82 /* PancakeSwapABI.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PancakeSwapABI.json; sourceTree = "<group>"; };
+		EF518491299F98F5008C4A82 /* AddWallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWallet.swift; sourceTree = "<group>"; };
+		EF518496299F9FE2008C4A82 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		EF518498299FA0AE008C4A82 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EF51849A299FB0B2008C4A82 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		EF51849C299FB0FC008C4A82 /* RenderableText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderableText.swift; sourceTree = "<group>"; };
+		EF51849F299FB32F008C4A82 /* CustomTextFieldConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFieldConfig.swift; sourceTree = "<group>"; };
+		EF5184A1299FB355008C4A82 /* CustomTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFieldStyle.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF36F6ED299E03EF00FC27B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97D80B3797B775732A03FF29 /* Pods_PopooApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF36F6FD299E03F000FC27B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D6B05F4DB4B3CFCE476925E /* Pods_PopooAppTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF36F707299E03F000FC27B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35053499C6A8AF4EB8FBEFAE /* Pods_PopooApp_PopooAppUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E162F1F54642908EBA0A45D5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DAB9536CD804436398A1F6FF /* Pods-PopooApp.debug.xcconfig */,
+				5F295287AE8D01FE374BB3FE /* Pods-PopooApp.release.xcconfig */,
+				18C1C346DF5100CB0E80A201 /* Pods-PopooApp-PopooAppUITests.debug.xcconfig */,
+				372E52EF8314C3B8787A6B9D /* Pods-PopooApp-PopooAppUITests.release.xcconfig */,
+				B8A1B77CB80FE140D5598DB9 /* Pods-PopooAppTests.debug.xcconfig */,
+				176038C1D9C8A10F121EB54C /* Pods-PopooAppTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E3B6E78AE9AD2C1A560EBCE6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A339E01A9BF7C42336298367 /* Pods_PopooApp.framework */,
+				437777A53130F39C6CE8BD83 /* Pods_PopooApp_PopooAppUITests.framework */,
+				218D9E1151EA87AEE7ACE35B /* Pods_PopooAppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EF36F6E7299E03EF00FC27B8 = {
+			isa = PBXGroup;
+			children = (
+				EF36F6F2299E03EF00FC27B8 /* PopooApp */,
+				EF36F703299E03F000FC27B8 /* PopooAppTests */,
+				EF36F70D299E03F000FC27B8 /* PopooAppUITests */,
+				EF36F6F1299E03EF00FC27B8 /* Products */,
+				E162F1F54642908EBA0A45D5 /* Pods */,
+				E3B6E78AE9AD2C1A560EBCE6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EF36F6F1299E03EF00FC27B8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF36F6F0299E03EF00FC27B8 /* PopooApp.app */,
+				EF36F700299E03F000FC27B8 /* PopooAppTests.xctest */,
+				EF36F70A299E03F000FC27B8 /* PopooAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF36F6F2299E03EF00FC27B8 /* PopooApp */ = {
+			isa = PBXGroup;
+			children = (
+				EF518495299F9FD9008C4A82 /* Models */,
+				EF518490299F98E7008C4A82 /* Views */,
+				EF36F735299E282500FC27B8 /* Service */,
+				EF36F72A299E0DFA00FC27B8 /* Components */,
+				EF36F727299E0D5200FC27B8 /* Extension */,
+				EF36F720299E04DB00FC27B8 /* StyleModifiers */,
+				EF36F6F3299E03EF00FC27B8 /* PopooAppApp.swift */,
+				EF36F6F7299E03F000FC27B8 /* Assets.xcassets */,
+				EF36F6F9299E03F000FC27B8 /* Preview Content */,
+			);
+			path = PopooApp;
+			sourceTree = "<group>";
+		};
+		EF36F6F9299E03F000FC27B8 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				EF36F6FA299E03F000FC27B8 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EF36F703299E03F000FC27B8 /* PopooAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				EF36F704299E03F000FC27B8 /* PopooAppTests.swift */,
+			);
+			path = PopooAppTests;
+			sourceTree = "<group>";
+		};
+		EF36F70D299E03F000FC27B8 /* PopooAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EF36F70E299E03F000FC27B8 /* PopooAppUITests.swift */,
+				EF36F710299E03F000FC27B8 /* PopooAppUITestsLaunchTests.swift */,
+			);
+			path = PopooAppUITests;
+			sourceTree = "<group>";
+		};
+		EF36F71D299E046200FC27B8 /* SwapCard */ = {
+			isa = PBXGroup;
+			children = (
+				EF36F71E299E046E00FC27B8 /* SwapInfoCard.swift */,
+				EF36F723299E088400FC27B8 /* CardType.swift */,
+			);
+			path = SwapCard;
+			sourceTree = "<group>";
+		};
+		EF36F720299E04DB00FC27B8 /* StyleModifiers */ = {
+			isa = PBXGroup;
+			children = (
+				EF36F721299E04EC00FC27B8 /* BorderedCard.swift */,
+				EF36F725299E0A8400FC27B8 /* Buttonify.swift */,
+				EF36F72D299E0E8E00FC27B8 /* ScaledModifier.swift */,
+				EF36F72F299E107C00FC27B8 /* ViewClipping.swift */,
+			);
+			path = StyleModifiers;
+			sourceTree = "<group>";
+		};
+		EF36F727299E0D5200FC27B8 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				EF36F731299E118800FC27B8 /* UIImage+Load.swift */,
+				EF36F728299E0D5D00FC27B8 /* EdgeInsets.swift */,
+				EF51848C299F7C9D008C4A82 /* String.swift */,
+				EF51849C299FB0FC008C4A82 /* RenderableText.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		EF36F72A299E0DFA00FC27B8 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				EF51849E299FB31F008C4A82 /* CustomizableTextField */,
+				EF36F71D299E046200FC27B8 /* SwapCard */,
+				EF36F72B299E0E1300FC27B8 /* ImageView.swift */,
+				EF36F733299E238300FC27B8 /* DualLabel.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		EF36F735299E282500FC27B8 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				EF36F736299E283200FC27B8 /* SwapService.swift */,
+				EF518484299E9AF2008C4A82 /* Extensions.swift */,
+				EF51848E299F7E40008C4A82 /* PancakeSwapABI.json */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		EF518490299F98E7008C4A82 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EF518498299FA0AE008C4A82 /* ContentView.swift */,
+				EF36F6F5299E03EF00FC27B8 /* SwapTokenView.swift */,
+				EF518491299F98F5008C4A82 /* AddWallet.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EF518495299F9FD9008C4A82 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EF518496299F9FE2008C4A82 /* AppState.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EF51849E299FB31F008C4A82 /* CustomizableTextField */ = {
+			isa = PBXGroup;
+			children = (
+				EF51849A299FB0B2008C4A82 /* CustomTextField.swift */,
+				EF51849F299FB32F008C4A82 /* CustomTextFieldConfig.swift */,
+				EF5184A1299FB355008C4A82 /* CustomTextFieldStyle.swift */,
+			);
+			path = CustomizableTextField;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF36F6EF299E03EF00FC27B8 /* PopooApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF36F714299E03F000FC27B8 /* Build configuration list for PBXNativeTarget "PopooApp" */;
+			buildPhases = (
+				EEC98E13B8E6969D11CB573C /* [CP] Check Pods Manifest.lock */,
+				EF36F6EC299E03EF00FC27B8 /* Sources */,
+				EF36F6ED299E03EF00FC27B8 /* Frameworks */,
+				EF36F6EE299E03EF00FC27B8 /* Resources */,
+				AED58E00D4C161197B82982D /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PopooApp;
+			productName = PopooApp;
+			productReference = EF36F6F0299E03EF00FC27B8 /* PopooApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EF36F6FF299E03F000FC27B8 /* PopooAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF36F717299E03F000FC27B8 /* Build configuration list for PBXNativeTarget "PopooAppTests" */;
+			buildPhases = (
+				EC1A7C391E32F36E3E5FAC6C /* [CP] Check Pods Manifest.lock */,
+				EF36F6FC299E03F000FC27B8 /* Sources */,
+				EF36F6FD299E03F000FC27B8 /* Frameworks */,
+				EF36F6FE299E03F000FC27B8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF36F702299E03F000FC27B8 /* PBXTargetDependency */,
+			);
+			name = PopooAppTests;
+			productName = PopooAppTests;
+			productReference = EF36F700299E03F000FC27B8 /* PopooAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EF36F709299E03F000FC27B8 /* PopooAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF36F71A299E03F000FC27B8 /* Build configuration list for PBXNativeTarget "PopooAppUITests" */;
+			buildPhases = (
+				A02CCEF814EF4E6F69758F1C /* [CP] Check Pods Manifest.lock */,
+				EF36F706299E03F000FC27B8 /* Sources */,
+				EF36F707299E03F000FC27B8 /* Frameworks */,
+				EF36F708299E03F000FC27B8 /* Resources */,
+				A4C922497326490ABFC6840C /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF36F70C299E03F000FC27B8 /* PBXTargetDependency */,
+			);
+			name = PopooAppUITests;
+			productName = PopooAppUITests;
+			productReference = EF36F70A299E03F000FC27B8 /* PopooAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF36F6E8299E03EF00FC27B8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					EF36F6EF299E03EF00FC27B8 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					EF36F6FF299E03F000FC27B8 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = EF36F6EF299E03EF00FC27B8;
+					};
+					EF36F709299E03F000FC27B8 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = EF36F6EF299E03EF00FC27B8;
+					};
+				};
+			};
+			buildConfigurationList = EF36F6EB299E03EF00FC27B8 /* Build configuration list for PBXProject "PopooApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EF36F6E7299E03EF00FC27B8;
+			productRefGroup = EF36F6F1299E03EF00FC27B8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF36F6EF299E03EF00FC27B8 /* PopooApp */,
+				EF36F6FF299E03F000FC27B8 /* PopooAppTests */,
+				EF36F709299E03F000FC27B8 /* PopooAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF36F6EE299E03EF00FC27B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF36F6FB299E03F000FC27B8 /* Preview Assets.xcassets in Resources */,
+				EF51848F299F7E40008C4A82 /* PancakeSwapABI.json in Resources */,
+				EF36F6F8299E03F000FC27B8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF36F6FE299E03F000FC27B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF36F708299E03F000FC27B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A02CCEF814EF4E6F69758F1C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PopooApp-PopooAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4C922497326490ABFC6840C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PopooApp-PopooAppUITests/Pods-PopooApp-PopooAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PopooApp-PopooAppUITests/Pods-PopooApp-PopooAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PopooApp-PopooAppUITests/Pods-PopooApp-PopooAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AED58E00D4C161197B82982D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PopooApp/Pods-PopooApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PopooApp/Pods-PopooApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PopooApp/Pods-PopooApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC1A7C391E32F36E3E5FAC6C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PopooAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EEC98E13B8E6969D11CB573C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PopooApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF36F6EC299E03EF00FC27B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF36F72C299E0E1300FC27B8 /* ImageView.swift in Sources */,
+				EF36F6F6299E03EF00FC27B8 /* SwapTokenView.swift in Sources */,
+				EF36F71F299E046E00FC27B8 /* SwapInfoCard.swift in Sources */,
+				EF36F726299E0A8400FC27B8 /* Buttonify.swift in Sources */,
+				EF51849B299FB0B2008C4A82 /* CustomTextField.swift in Sources */,
+				EF36F732299E118800FC27B8 /* UIImage+Load.swift in Sources */,
+				EF36F730299E107C00FC27B8 /* ViewClipping.swift in Sources */,
+				EF5184A2299FB355008C4A82 /* CustomTextFieldStyle.swift in Sources */,
+				EF36F722299E04EC00FC27B8 /* BorderedCard.swift in Sources */,
+				EF518499299FA0AE008C4A82 /* ContentView.swift in Sources */,
+				EF36F729299E0D5D00FC27B8 /* EdgeInsets.swift in Sources */,
+				EF36F734299E238300FC27B8 /* DualLabel.swift in Sources */,
+				EF5184A0299FB32F008C4A82 /* CustomTextFieldConfig.swift in Sources */,
+				EF36F72E299E0E8E00FC27B8 /* ScaledModifier.swift in Sources */,
+				EF36F737299E283200FC27B8 /* SwapService.swift in Sources */,
+				EF36F724299E088400FC27B8 /* CardType.swift in Sources */,
+				EF51849D299FB0FC008C4A82 /* RenderableText.swift in Sources */,
+				EF518492299F98F5008C4A82 /* AddWallet.swift in Sources */,
+				EF51848D299F7C9D008C4A82 /* String.swift in Sources */,
+				EF518497299F9FE2008C4A82 /* AppState.swift in Sources */,
+				EF36F6F4299E03EF00FC27B8 /* PopooAppApp.swift in Sources */,
+				EF518485299E9AF2008C4A82 /* Extensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF36F6FC299E03F000FC27B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF36F705299E03F000FC27B8 /* PopooAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF36F706299E03F000FC27B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF36F711299E03F000FC27B8 /* PopooAppUITestsLaunchTests.swift in Sources */,
+				EF36F70F299E03F000FC27B8 /* PopooAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EF36F702299E03F000FC27B8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF36F6EF299E03EF00FC27B8 /* PopooApp */;
+			targetProxy = EF36F701299E03F000FC27B8 /* PBXContainerItemProxy */;
+		};
+		EF36F70C299E03F000FC27B8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF36F6EF299E03EF00FC27B8 /* PopooApp */;
+			targetProxy = EF36F70B299E03F000FC27B8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		EF36F712299E03F000FC27B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EF36F713299E03F000FC27B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EF36F715299E03F000FC27B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DAB9536CD804436398A1F6FF /* Pods-PopooApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PopooApp/Preview Content\"";
+				DEVELOPMENT_TEAM = 8T963ZW2EJ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.krishna.PopooApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EF36F716299E03F000FC27B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F295287AE8D01FE374BB3FE /* Pods-PopooApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PopooApp/Preview Content\"";
+				DEVELOPMENT_TEAM = 8T963ZW2EJ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.krishna.PopooApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EF36F718299E03F000FC27B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8A1B77CB80FE140D5598DB9 /* Pods-PopooAppTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8T963ZW2EJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.krishna.PopooAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PopooApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PopooApp";
+			};
+			name = Debug;
+		};
+		EF36F719299E03F000FC27B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 176038C1D9C8A10F121EB54C /* Pods-PopooAppTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8T963ZW2EJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.krishna.PopooAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PopooApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PopooApp";
+			};
+			name = Release;
+		};
+		EF36F71B299E03F000FC27B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18C1C346DF5100CB0E80A201 /* Pods-PopooApp-PopooAppUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8T963ZW2EJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.krishna.PopooAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PopooApp;
+			};
+			name = Debug;
+		};
+		EF36F71C299E03F000FC27B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 372E52EF8314C3B8787A6B9D /* Pods-PopooApp-PopooAppUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8T963ZW2EJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.krishna.PopooAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PopooApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF36F6EB299E03EF00FC27B8 /* Build configuration list for PBXProject "PopooApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF36F712299E03F000FC27B8 /* Debug */,
+				EF36F713299E03F000FC27B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF36F714299E03F000FC27B8 /* Build configuration list for PBXNativeTarget "PopooApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF36F715299E03F000FC27B8 /* Debug */,
+				EF36F716299E03F000FC27B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF36F717299E03F000FC27B8 /* Build configuration list for PBXNativeTarget "PopooAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF36F718299E03F000FC27B8 /* Debug */,
+				EF36F719299E03F000FC27B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF36F71A299E03F000FC27B8 /* Build configuration list for PBXNativeTarget "PopooAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF36F71B299E03F000FC27B8 /* Debug */,
+				EF36F71C299E03F000FC27B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EF36F6E8299E03EF00FC27B8 /* Project object */;
+}

@@ -1,0 +1,6 @@
+framework module Pods_PopooApp {
+  umbrella header "Pods-PopooApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
