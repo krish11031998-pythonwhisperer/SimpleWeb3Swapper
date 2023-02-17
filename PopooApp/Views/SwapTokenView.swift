@@ -16,11 +16,17 @@ extension BigUInt {
     }
 }
 
+enum ConversionState {
+    case idle, converting, converted
+}
+
 struct SwapTokenView: View {
     
     @EnvironmentObject var appState: AppState
     private let service: Web3ServiceInterface
     @State var balance: BigUInt = .zero
+    @State var convert: ConversionState = .idle
+    @State var amountToConvert: String = ""
     init(service: Web3ServiceInterface = Web3Service()) {
         self.service = service
     }
@@ -50,14 +56,29 @@ struct SwapTokenView: View {
             
     }
     
+    @ViewBuilder var convertNowButton: some View {
+        switch convert {
+        case .idle:
+            "Convert".systemBody(color: .white).text
+                .buttonifyAsync(callBack: convert)
+                .padding(.init(vertical: 15, horizontal: 15))
+                .background(Color.blue)
+                .clipping(to: .roundedRect(cornerRadius: 15))
+        case .converting:
+            Constants.progressView
+        case .converted:
+            Constants.img
+        }
+    }
+    
     var body: some View {
         VStack (alignment: .center, spacing: 24){
             Spacer()
             if appState.wallet != nil {
                 // Convert the BigUInt value to a Double
-                SwapInfoCard(currency: "BNB", balance: balance.floatValue, cardType: .from)
-                Constants.img
-                SwapInfoCard(currency: "ETH", balance: 2.23, cardType: .to)
+                SwapInfoCard(value: $amountToConvert, currency: "BNB", balance: balance.floatValue, cardType: .from)
+                convertNowButton
+                SwapInfoCard(value: .constant(""), currency: "ETH", balance: 2.23, cardType: .to)
                 swapDetails
                 Spacer()
                 tradeButton
@@ -77,6 +98,16 @@ struct SwapTokenView: View {
         print("(DEBUG) address: \(addressStr) and balance: \(balance)")
         self.balance = balance
     }
+    
+    private func convert() async {
+        withAnimation(.easeInOut) {
+            self.convert = .converting
+        }
+        _ = await service.getConversion(amount: BigUInt(amountToConvert) ?? .zero, tokenA: String.Token.bnb.rawValue, tokenB: String.Token.busd.rawValue)
+        withAnimation(.easeInOut) {
+            self.convert = .converted
+        }
+    }
 
 }
 
@@ -87,6 +118,14 @@ extension SwapTokenView {
                 .resizable()
                 .foregroundColor(.white)
                 .scale(to: .fit)
+                .frame(width: 15, height: 15, alignment: .center)
+                .padding(15)
+                .background(Color.blue)
+                .clipping(to: .circle)
+        }()
+        
+        static let progressView: some View = {
+            ProgressView()
                 .frame(width: 15, height: 15, alignment: .center)
                 .padding(15)
                 .background(Color.blue)

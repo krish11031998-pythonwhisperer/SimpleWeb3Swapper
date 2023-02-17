@@ -14,7 +14,9 @@ protocol Web3ServiceInterface {
     func connect() async
     func connectWallet(privateKey: String, password: String) async -> Web3.Web3Wallet?
     func getBalance(for address: EthereumAddress) async -> BigUInt?
+    func getConversion(amount: BigUInt, tokenA: String, tokenB: String) async -> Any?
 }
+
 
 
 class Web3Service: Web3ServiceInterface {
@@ -63,31 +65,33 @@ class Web3Service: Web3ServiceInterface {
 //
 //    }
     
-//    func getConversion() async -> String? {
-//
-//        if web3 == nil {
-//            await connect()
-//        }
-//
-//        guard let factoryABI = String.readFromJSONFile("PancakeSwapABI") else { return nil }
-//
-//        //Setup Factory
-//        let factoryAddress = "0xcA143Ce32Fe78f1f7019d7d551a6402fC5350c73"
-//
-//        guard let factory = web3?.contract(factoryABI, at: .init(from: factoryAddress)) else { return nil }
-//
-//        //Swap Token
-//        let tokenA = Address("0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c") // Binance Coin (BNB)
-//        let tokenB = Address("0xe9e7cea3dedca5984780bafc599bd69add087d56") // Binance USD (BUSD)
-//
+    func getConversion(amount: BigUInt, tokenA: String = String.Token.bnb.rawValue, tokenB: String = String.Token.busd.rawValue) async -> Any? {
+
+        if web3 == nil {
+            await connect()
+        }
+
+        guard let factoryABI = String.readFromJSONFile("PancakeSwapABI") else { return nil }
+
+        //Setup Factory
+        let factoryAddress = "0xcA143Ce32Fe78f1f7019d7d551a6402fC5350c73"
+
+        guard let factory = web3?.contract(factoryABI, at: .init(from: factoryAddress)) else { return nil }
+
+
 //        let amountIn = BigUInt("1000000000000000000")
-//
-//        guard let amountOut = factory.contract.method("getAmountsOut", parameters: [amountIn, [tokenA, tokenB]], extraData: nil) else { return nil }
-//        let decodedData = factory.contract.decodeReturnData("getAmountsOut", data: amountOut)
-//        print(amountOut)
-//
-//        return String(data: amountOut, encoding: .utf8)
-//    }
+        let converted = factory.contract.method("getAmountsOut", parameters: [amount, [tokenA, tokenB]], extraData: nil)
+        guard let amountOut = converted else { return nil }
+       
+//        if let outputAmountsData = amountOut.first  {
+//            let outputAmounts = try ABI.decodeParameters([.array(.uint256)], outputAmountsData)
+//            if let amounts = outputAmounts[0] as? [BigUInt] {
+//                print("Output amount: \(amounts.last!.description)")
+//            }
+//        }
+        
+        return nil
+    }
     
     func connectWallet(privateKey: String, password: String) async -> Web3.Web3Wallet? {
 

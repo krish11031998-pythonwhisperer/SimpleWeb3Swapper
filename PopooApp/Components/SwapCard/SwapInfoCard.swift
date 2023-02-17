@@ -19,15 +19,19 @@ fileprivate extension String {
 struct SwapInfoCard: View {
     
     let currency: String
-    @State var value: String = .init("")
+    @Binding var value: String
     let balance: Float
     let type: CardType
     @State var selectedMax: Bool = false
     
-    init(currency: String, balance: Float, cardType: CardType) {
+    init(value: Binding<String>,
+         currency: String,
+         balance: Float,
+         cardType: CardType) {
         self.currency = currency
         self.balance = balance
         self.type = cardType
+        self._value = value
     }
     
     //MARK: - HedaerView
@@ -77,6 +81,9 @@ struct SwapInfoCard: View {
                     .foregroundColor(selectedMax ? .white : .blue)
                     .padding(.init(top: 5, leading: 15, bottom: 5, trailing: 15))
                     .borderCard(borderColor: .blue, radius: 12, borderWidth: 1.5)
+                    .buttonify {
+                        value = String(format: "%.4f", balance)
+                    }
             }
         }
         
@@ -106,7 +113,7 @@ struct SwapInfoCard: View {
 
 struct SwapInfoCard_Previews: PreviewProvider {
     static var previews: some View {
-        SwapInfoCard(currency: "BTC", balance: 0.345345, cardType: .from)
+        SwapInfoCard(value: .constant(""), currency: "BTC", balance: 0.345345, cardType: .from)
             .padding(.all, 15)
     }
 }

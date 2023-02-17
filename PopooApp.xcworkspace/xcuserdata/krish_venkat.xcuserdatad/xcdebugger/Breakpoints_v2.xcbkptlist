@@ -3,4 +3,54 @@
    uuid = "6C96371D-4049-4DFE-B05D-0C588A7E22B9"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "048A4CF3-99C6-4A89-A92E-B28E11553336"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PopooApp/Service/SwapService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "getConversion(amount:tokenA:tokenB:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "048A4CF3-99C6-4A89-A92E-B28E11553336 - 842390b42da8dd7e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for PopooApp.Web3Service.getConversion(amount: BigInt.BigUInt, tokenA: Swift.String, tokenB: Swift.String) async -&gt; Swift.Optional&lt;Any&gt;"
+                  moduleName = "PopooApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/krish_venkat/Desktop/PopooApp/PopooApp/Service/SwapService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "1412">
+               </Location>
+               <Location
+                  uuid = "048A4CF3-99C6-4A89-A92E-B28E11553336 - 15f669835da1e97c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for PopooApp.Web3Service.getConversion(amount: BigInt.BigUInt, tokenA: Swift.String, tokenB: Swift.String) async -&gt; Swift.Optional&lt;Any&gt;"
+                  moduleName = "PopooApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/krish_venkat/Desktop/PopooApp/PopooApp/Service/SwapService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "1148">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
