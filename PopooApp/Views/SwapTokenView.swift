@@ -9,11 +9,18 @@ import SwiftUI
 import BigInt
 import Web3Core
 
+extension BigUInt {
+    var floatValue: Float {
+        let double = Double(self)/pow(10, 9)
+        return Float(double)
+    }
+}
+
 struct SwapTokenView: View {
     
     @EnvironmentObject var appState: AppState
     private let service: Web3ServiceInterface
-    @State var balance: BigUInt? = nil
+    @State var balance: BigUInt = .zero
     init(service: Web3ServiceInterface = Web3Service()) {
         self.service = service
     }
@@ -47,7 +54,8 @@ struct SwapTokenView: View {
         VStack (alignment: .center, spacing: 24){
             Spacer()
             if appState.wallet != nil {
-                SwapInfoCard(currency: "BTC", balance: 1, cardType: .from)
+                // Convert the BigUInt value to a Double
+                SwapInfoCard(currency: "BNB", balance: balance.floatValue, cardType: .from)
                 Constants.img
                 SwapInfoCard(currency: "ETH", balance: 2.23, cardType: .to)
                 swapDetails
@@ -55,9 +63,9 @@ struct SwapTokenView: View {
                 tradeButton
             }
         }
+        .ignoresSafeArea(.keyboard, edges: .bottom)
         .task { await onAppear() }
         .padding()
-        .ignoresSafeArea(.keyboard)
     }
     
     private func onAppear() async {
@@ -65,7 +73,8 @@ struct SwapTokenView: View {
                 let addressStr = try? web3.getAccounts().first?.address,
                 let address = EthereumAddress(addressStr)
         else { return }
-        let balance = await service.getBalance(for: address)
+        guard let balance = await service.getBalance(for: address) else { return }
+        print("(DEBUG) address: \(addressStr) and balance: \(balance)")
         self.balance = balance
     }
 

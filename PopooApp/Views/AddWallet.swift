@@ -44,7 +44,6 @@ struct AddWalletView: View {
                     showSwapPage = true
                 }
             }
-            .background(Color.red)
     }
     
     var body: some View {

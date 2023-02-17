@@ -84,7 +84,7 @@ struct SwapInfoCard: View {
     
     
     var balanceText: some View {
-        Text("Balance: 0.232452352 \(currency)")
+        Text("Balance: \(balance) \(currency)")
             .font(.system(size: 12, weight: .regular))
             .foregroundColor(.gray)
     }
