@@ -9,6 +9,7 @@ import SwiftUI
 import BigInt
 import Web3Core
 import web3swift
+import Combine
 
 extension BigUInt {
     var floatValue: Float {
@@ -28,6 +29,9 @@ struct SwapTokenView: View {
     @State var balance: BigUInt = .zero
     @State var convert: ConversionState = .idle
     @State var amountToConvert: String = ""
+    @State var tokenA: String.Token = .bnb
+    @State var tokenB: String.Token = .busd
+    
     init(service: Web3ServiceInterface = Web3Service()) {
         self.service = service
     }
@@ -60,11 +64,11 @@ struct SwapTokenView: View {
     @ViewBuilder var convertNowButton: some View {
         switch convert {
         case .idle:
-            "Convert".systemBody(color: .white).text
+            "Convert".systemHeading2(color: .white).text
                 .buttonifyAsync(callBack: convert)
                 .padding(.init(vertical: 15, horizontal: 15))
                 .background(Color.blue)
-                .clipping(to: .roundedRect(cornerRadius: 15))
+                .clipping(to: .capsule)
         case .converting:
             Constants.progressView
         case .converted:
@@ -73,16 +77,19 @@ struct SwapTokenView: View {
     }
     
     var body: some View {
-        VStack (alignment: .center, spacing: 24){
-            Spacer()
-            if appState.wallet != nil {
-                // Convert the BigUInt value to a Double
-                SwapInfoCard(value: $amountToConvert, currency: "BNB", balance: balance.floatValue, cardType: .from)
-                convertNowButton
-                SwapInfoCard(value: .constant(""), currency: "BUSD", balance: 0, cardType: .to)
-                swapDetails
+        ScrollView(.vertical, showsIndicators: false) {
+            VStack (alignment: .center, spacing: 24){
                 Spacer()
-                tradeButton
+                if appState.wallet != nil {
+                    SwapInfoCard(value: $amountToConvert, currency: tokenA.name, balance: balance.floatValue, cardType: .from)
+                    convertNowButton
+                    if convert == .converted {
+                        SwapInfoCard(value: .constant(""), currency: tokenB.name, balance: 0, cardType: .to)
+                        swapDetails
+                        Spacer()
+                        tradeButton
+                    }
+                }
             }
         }
         .ignoresSafeArea(.keyboard, edges: .bottom)
@@ -101,6 +108,7 @@ struct SwapTokenView: View {
     }
     
     private func convert() async {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
         withAnimation(.easeInOut) {
             self.convert = .converting
         }

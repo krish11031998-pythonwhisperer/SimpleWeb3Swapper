@@ -75,7 +75,6 @@ class Web3Service: Web3ServiceInterface {
         guard let pancakeContract = Web3.Contract.pancakeContract(web3: web3) else { return nil}
         
         let result = await pancakeContract.getAmountsOut(amount: amount, tokenA: tokenA, tokenB: tokenB)
-        print("(DEBUG) result: ", result)
         
         return .zero
     }

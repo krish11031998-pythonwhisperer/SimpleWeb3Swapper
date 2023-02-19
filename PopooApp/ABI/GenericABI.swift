@@ -10,11 +10,14 @@ import web3swift
 import Web3Core
 import BigInt
 
+enum OperationType { case write, read }
+
 protocol GenericABI {
     var address: String { get }
     var abi: String? { get }
     var methodName: String { get }
     var params: [Any] { get }
+    var operation: OperationType { get }
     func call(web3: Web3.Contract) async -> [String : Any]?
 }
 
@@ -28,16 +31,28 @@ extension GenericABI {
             web3.transaction.chainID = chainID
         }
         
-        do {
-            let result = try await web3.web3.eth.callTransaction(web3.transaction)
-            print("(DEBUG) callTransactionResult : ", result)
-            let data = web3.contract.decodeReturnData(methodName, data: result)
-            print("(DEBUG) data: ", data)
-            return data
-        } catch {
-            print("(ERROR) err: ", error.localizedDescription)
-            return nil
+        if operation == .read {
+            guard let intermediate = web3.createReadOperation(methodName, parameters: params) else { return nil }
+            do {
+                let result = try await intermediate.callContractMethod()
+                print("(DEBUG) data: ", result)
+                return result
+            } catch {
+                print("(ERROR) err: ", error.localizedDescription)
+                return nil
+            }
+        } else {
+            guard let intermediate = web3.createWriteOperation(methodName, parameters: params) else { return nil }
+            do {
+                let result = try await intermediate.callContractMethod()
+                print("(DEBUG) data: ", result)
+                return result
+            } catch {
+                print("(ERROR) err: ", error.localizedDescription)
+                return nil
+            }
         }
+       
     }
 }
 
