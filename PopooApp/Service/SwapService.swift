@@ -14,7 +14,7 @@ protocol Web3ServiceInterface {
     func connect() async
     func connectWallet(privateKey: String, password: String) async -> Web3.Web3Wallet?
     func getBalance(for address: EthereumAddress) async -> BigUInt?
-    func getConversion(amount: BigUInt, tokenA: String, tokenB: String) async -> Any?
+    func getConversion(amount: BigUInt, tokenA: String, tokenB: String) async -> BigUInt?
 }
 
 
@@ -24,7 +24,7 @@ class Web3Service: Web3ServiceInterface {
     var web3: Web3? = nil
     
     func connect() async {
-        // Set up a provider to connect to the Binance Smart Chain Testnet node
+
         guard let url = URL.binanceTestNetURL else { return }
         let provider = Web3HttpProvider(url: url, network: .Rinkeby)
 
@@ -65,41 +65,28 @@ class Web3Service: Web3ServiceInterface {
 //
 //    }
     
-    func getConversion(amount: BigUInt, tokenA: String = String.Token.bnb.rawValue, tokenB: String = String.Token.busd.rawValue) async -> Any? {
+    func getConversion(amount: BigUInt, tokenA: String = String.Token.bnb.rawValue, tokenB: String = String.Token.busd.rawValue) async -> BigUInt? {
 
-        if web3 == nil {
+        guard let web3 = web3 else {
             await connect()
+            return await getConversion(amount: amount, tokenA: tokenA, tokenB: tokenB)
         }
 
-        guard let factoryABI = String.readFromJSONFile("PancakeSwapABI") else { return nil }
-
-        //Setup Factory
-        let factoryAddress = "0xcA143Ce32Fe78f1f7019d7d551a6402fC5350c73"
-
-        guard let factory = web3?.contract(factoryABI, at: .init(from: factoryAddress)) else { return nil }
-
-
-//        let amountIn = BigUInt("1000000000000000000")
-        let converted = factory.contract.method("getAmountsOut", parameters: [amount, [tokenA, tokenB]], extraData: nil)
-        guard let amountOut = converted else { return nil }
-       
-//        if let outputAmountsData = amountOut.first  {
-//            let outputAmounts = try ABI.decodeParameters([.array(.uint256)], outputAmountsData)
-//            if let amounts = outputAmounts[0] as? [BigUInt] {
-//                print("Output amount: \(amounts.last!.description)")
-//            }
-//        }
+        guard let pancakeContract = Web3.Contract.pancakeContract(web3: web3) else { return nil}
         
-        return nil
+        let result = await pancakeContract.getAmountsOut(amount: amount, tokenA: tokenA, tokenB: tokenB)
+        print("(DEBUG) result: ", result)
+        
+        return .zero
     }
     
     func connectWallet(privateKey: String, password: String) async -> Web3.Web3Wallet? {
-
-        if web3 == nil {
+        guard let web3 = web3 else {
             await connect()
+            return await connectWallet(privateKey: privateKey, password: password)
         }
         
-        web3?.addKeystoreManager(KeystoreManager.defaultManager)
+        web3.addKeystoreManager(KeystoreManager.defaultManager)
         
         guard let keyData = Data.fromHex(privateKey),
               let keyStore = try? EthereumKeystoreV3(privateKey: keyData, password: password) else {
@@ -107,17 +94,18 @@ class Web3Service: Web3ServiceInterface {
         }
         
         let keystoreManager = KeystoreManager([keyStore])
-        web3?.addKeystoreManager(keystoreManager)
+        web3.addKeystoreManager(keystoreManager)
         
-        return web3?.wallet
+        return web3.wallet
     }
     
     func getBalance(for address: EthereumAddress) async -> BigUInt? {
-        if web3 == nil {
+        guard let web3 = web3 else {
             await connect()
+            return await getBalance(for: address)
         }
         
-        guard var balance = try? await web3?.eth.getBalance(for: address) else { return nil }
+        guard var balance = try? await web3.eth.getBalance(for: address) else { return nil }
         
         balance /= 1000000000
         

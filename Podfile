@@ -6,7 +6,7 @@ target 'PopooApp' do
   use_frameworks!
 
   # Pods for PopooApp
-  pod 'web3swift'
+  pod 'web3swift','~> 3.1.1'
   
   target 'PopooAppTests' do
     inherit! :search_paths

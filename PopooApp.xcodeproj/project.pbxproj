@@ -38,6 +38,8 @@
 		EF51849D299FB0FC008C4A82 /* RenderableText.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF51849C299FB0FC008C4A82 /* RenderableText.swift */; };
 		EF5184A0299FB32F008C4A82 /* CustomTextFieldConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF51849F299FB32F008C4A82 /* CustomTextFieldConfig.swift */; };
 		EF5184A2299FB355008C4A82 /* CustomTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5184A1299FB355008C4A82 /* CustomTextFieldStyle.swift */; };
+		EF5184AE29A23641008C4A82 /* PancakeSwapABI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5184AD29A23641008C4A82 /* PancakeSwapABI.swift */; };
+		EF5184B029A23ABB008C4A82 /* GenericABI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5184AF29A23ABB008C4A82 /* GenericABI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +100,8 @@
 		EF51849C299FB0FC008C4A82 /* RenderableText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderableText.swift; sourceTree = "<group>"; };
 		EF51849F299FB32F008C4A82 /* CustomTextFieldConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFieldConfig.swift; sourceTree = "<group>"; };
 		EF5184A1299FB355008C4A82 /* CustomTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFieldStyle.swift; sourceTree = "<group>"; };
+		EF5184AD29A23641008C4A82 /* PancakeSwapABI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PancakeSwapABI.swift; sourceTree = "<group>"; };
+		EF5184AF29A23ABB008C4A82 /* GenericABI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericABI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +180,7 @@
 		EF36F6F2299E03EF00FC27B8 /* PopooApp */ = {
 			isa = PBXGroup;
 			children = (
+				EF5184AC29A23627008C4A82 /* ABI */,
 				EF518495299F9FD9008C4A82 /* Models */,
 				EF518490299F98E7008C4A82 /* Views */,
 				EF36F735299E282500FC27B8 /* Service */,
@@ -261,7 +266,6 @@
 			children = (
 				EF36F736299E283200FC27B8 /* SwapService.swift */,
 				EF518484299E9AF2008C4A82 /* Extensions.swift */,
-				EF51848E299F7E40008C4A82 /* PancakeSwapABI.json */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -292,6 +296,16 @@
 				EF5184A1299FB355008C4A82 /* CustomTextFieldStyle.swift */,
 			);
 			path = CustomizableTextField;
+			sourceTree = "<group>";
+		};
+		EF5184AC29A23627008C4A82 /* ABI */ = {
+			isa = PBXGroup;
+			children = (
+				EF5184AD29A23641008C4A82 /* PancakeSwapABI.swift */,
+				EF51848E299F7E40008C4A82 /* PancakeSwapABI.json */,
+				EF5184AF29A23ABB008C4A82 /* GenericABI.swift */,
+			);
+			path = ABI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -537,6 +551,7 @@
 				EF36F6F6299E03EF00FC27B8 /* SwapTokenView.swift in Sources */,
 				EF36F71F299E046E00FC27B8 /* SwapInfoCard.swift in Sources */,
 				EF36F726299E0A8400FC27B8 /* Buttonify.swift in Sources */,
+				EF5184AE29A23641008C4A82 /* PancakeSwapABI.swift in Sources */,
 				EF51849B299FB0B2008C4A82 /* CustomTextField.swift in Sources */,
 				EF36F732299E118800FC27B8 /* UIImage+Load.swift in Sources */,
 				EF36F730299E107C00FC27B8 /* ViewClipping.swift in Sources */,
@@ -552,6 +567,7 @@
 				EF51849D299FB0FC008C4A82 /* RenderableText.swift in Sources */,
 				EF518492299F98F5008C4A82 /* AddWallet.swift in Sources */,
 				EF51848D299F7C9D008C4A82 /* String.swift in Sources */,
+				EF5184B029A23ABB008C4A82 /* GenericABI.swift in Sources */,
 				EF518497299F9FE2008C4A82 /* AppState.swift in Sources */,
 				EF36F6F4299E03EF00FC27B8 /* PopooAppApp.swift in Sources */,
 				EF518485299E9AF2008C4A82 /* Extensions.swift in Sources */,

@@ -8,6 +8,7 @@
 import SwiftUI
 import BigInt
 import Web3Core
+import web3swift
 
 extension BigUInt {
     var floatValue: Float {
@@ -78,7 +79,7 @@ struct SwapTokenView: View {
                 // Convert the BigUInt value to a Double
                 SwapInfoCard(value: $amountToConvert, currency: "BNB", balance: balance.floatValue, cardType: .from)
                 convertNowButton
-                SwapInfoCard(value: .constant(""), currency: "ETH", balance: 2.23, cardType: .to)
+                SwapInfoCard(value: .constant(""), currency: "BUSD", balance: 0, cardType: .to)
                 swapDetails
                 Spacer()
                 tradeButton
@@ -103,7 +104,14 @@ struct SwapTokenView: View {
         withAnimation(.easeInOut) {
             self.convert = .converting
         }
-        _ = await service.getConversion(amount: BigUInt(amountToConvert) ?? .zero, tokenA: String.Token.bnb.rawValue, tokenB: String.Token.busd.rawValue)
+//        let amount = String((Float(amountToConvert) ?? .zero) * pow(10, 18))
+//        guard let convertedUnit = BigUInt("1000000000000000000") else { return }
+        let convertedUnit = BigUInt("500000000000000000")
+        print("(DEBUG) converted Unit: ", convertedUnit)
+        
+        //let converted = Web3.Utils.parseToBigUInt(amountToConvert, units: .wei)
+        let val = await service.getConversion(amount: convertedUnit, tokenA: String.Token.bnb.rawValue, tokenB: String.Token.busd.rawValue)
+        print("(DEBUG) Converted Value: ", val)
         withAnimation(.easeInOut) {
             self.convert = .converted
         }

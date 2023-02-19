@@ -12,7 +12,7 @@ PODS:
     - Web3Core (~> 3.1.1)
 
 DEPENDENCIES:
-  - web3swift
+  - web3swift (~> 3.1.1)
 
 SPEC REPOS:
   trunk:
@@ -31,6 +31,6 @@ SPEC CHECKSUMS:
   Web3Core: ac97e5a50de9022eb5057536b669a526755d4a31
   web3swift: 279bc408f6c22d1ab400dc1ca0d15a2c9b2dfc60
 
-PODFILE CHECKSUM: 8e15c734bff1bd8c3f56b3ad2732c20c275fd14e
+PODFILE CHECKSUM: ce0439a9e654568eee6ab91ef9c14dc7b3669702
 
 COCOAPODS: 1.11.3
