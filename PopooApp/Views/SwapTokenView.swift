@@ -104,8 +104,6 @@ struct SwapTokenView: View {
         withAnimation(.easeInOut) {
             self.convert = .converting
         }
-//        let amount = String((Float(amountToConvert) ?? .zero) * pow(10, 18))
-//        guard let convertedUnit = BigUInt("1000000000000000000") else { return }
         let convertedUnit = BigUInt("500000000000000000")
         print("(DEBUG) converted Unit: ", convertedUnit)
         
@@ -141,7 +139,7 @@ extension SwapTokenView {
         }()
         
         static let testSwapDetail: [String: String] = [
-            "Exchange Rate" : "1 USDT = 2.92 BNB",
+            "Exchange Rate" : "1 BNB = 1 BUSDT",
             "Network Fees" : "0.00032 NEAR",
             "Price Impact" : "-0.005%",
             "Swapping with" : "Normal AMM",
